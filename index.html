@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Little Love Story ♡</title>
+
+    <style>
+        
+:root {
+    --pink: #d99ab1;
+    --soft-pink: #f8e8ed;
+    --dark-pink: #895970;
+    --green: #71836a;
+    --dark-green: #526753;
+    --cream: #fffaf4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--dark-green);
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+h1 {
+    color: var(--dark-pink);
+    font-size: 42px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+h2 {
+    color: var(--green);
+    font-size: 30px;
+}
+
+
+/* HEADER */
+.site-header {
+    background: #fffaf4;
+    padding: 28px 20px;
+    border-bottom: 1px solid #eadde0;
+}
+
+.site-title {
+    color: #895970;
+    font-size: 34px;
+    font-style: italic;
+    margin: 0 0 25px;
+    font-weight: normal;
+}
+
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #526753;
+    border: 2px solid #dce2d5;
+    border-radius: 35px;
+    padding: 13px 22px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #526753;
+    color: white;
+}
+
+/* HOME */
+.home {
+    padding: 65px 25px;
+}
+
+.date {
+    color: #526753;
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.home h1 {
+    font-size: 48px;
+    font-style: normal;
+    margin: 30px 0;
+}
+
+.subtitle {
+    color: #89947c;
+    font-size: 25px;
+    font-style: italic;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: auto;
+}
+
+.heart {
+    color: #c77e9c;
+    font-size: 55px;
+    margin: 30px;
+}
+
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 27px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        padding: 11px 15px;
+        font-size: 14px;
+    }
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+    padding: 65px 25px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.section-heading {
+    color: #895970;
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #89947c;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.memory-card {
+    background: #fffdfb;
+    border: 1px solid #eadde0;
+    border-radius: 25px;
+    padding: 40px 25px;
+    margin: 25px auto;
+    max-width: 750px;
+    box-shadow: 0 5px 20px rgba(137, 89, 112, 0.06);
+}
+
+.memory-card h2 {
+    color: #71836a;
+    font-family: Georgia, serif;
+}
+
+.memory-card p {
+    color: #62675b;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.memory-heart {
+    color: #c77e9c;
+    font-size: 40px;
+}
+
+/* LETTER PAGE */
+.letter-photo {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 35px auto;
+    padding: 12px;
+    background: white;
+    border: 1px solid #eadde0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(137, 89, 112, 0.08);
+}
+
+.letter-card {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 45px 35px;
+    background: #fffdfb;
+    border: 1px solid #eadde0;
+    border-radius: 25px;
+    text-align: left;
+}
+
+.letter-card p {
+    color: #62675b;
+    font-size: 19px;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.letter-card .letter-greeting {
+    color: #71836a;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .letter-card {
+        padding: 30px 22px;
+    }
+
+    .letter-card p {
+        font-size: 17px;
+    }
+}
+
+/* LITTLE SURPRISES */
+.surprise-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.surprise-card {
+    background: #fff5f8;
+    border: 2px dashed #d99ab1;
+    border-radius: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.surprise-card:hover {
+    transform: translateY(-5px);
+}
+
+.surprise-card .note-heart {
+    font-size: 38px;
+    color: #c77e9c;
+    margin-bottom: 12px;
+}
+
+.surprise-card h2 {
+    font-size: 23px;
+    color: #526753;
+}
+
+.surprise-card summary {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    background: #526753;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 35px;
+    margin-top: 15px;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.surprise-card summary:hover {
+    background: #71836a;
+}
+
+.surprise-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.note-message {
+    color: #62675b;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eadde0;
+}
+
+@media (max-width: 600px) {
+    .surprise-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PHOTO GALLERY */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 900px;
+    margin: 30px auto 55px;
+    padding: 0 15px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border: 7px solid white;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(137, 89, 112, 0.15);
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .photo-gallery img {
+        height: 150px;
+    }
+}
+
+/* LITTLE MOMENTS SCRAPBOOK */
+.little-moments-gallery {
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 780px;
+    gap: 30px 18px;
+    padding: 25px 20px;
+    background: #f8e8ed;
+    border: 1px solid #ead3dc;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(137, 89, 112, 0.10);
+}
+
+.little-moments-gallery::before {
+    content: "♡  little things, lovely memories  ♡";
+    grid-column: 1 / -1;
+    color: #895970;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.little-moments-gallery img {
+    grid-column: span 2;
+    height: 190px;
+    padding: 9px 9px 25px;
+    background: #fffdf9;
+    border: 1px solid #eadde0;
+    border-radius: 3px;
+    box-shadow: 2px 5px 12px rgba(82, 103, 83, 0.15);
+}
+
+.little-moments-gallery img:nth-of-type(1) {
+    transform: rotate(-4deg);
+}
+
+.little-moments-gallery img:nth-of-type(2) {
+    transform: rotate(3deg);
+}
+
+.little-moments-gallery img:nth-of-type(3) {
+    transform: rotate(-2deg);
+}
+
+.little-moments-gallery img:nth-of-type(4) {
+    grid-column: 2 / span 2;
+    transform: rotate(3deg);
+}
+
+.little-moments-gallery img:nth-of-type(5) {
+    grid-column: 4 / span 2;
+    transform: rotate(-3deg);
+}
+
+@media (max-width: 700px) {
+    .little-moments-gallery {
+        gap: 20px 12px;
+        padding: 15px 10px;
+    }
+
+    .little-moments-gallery img {
+        height: 140px;
+        padding: 6px 6px 18px;
+    }
+}
+
+/* VINYL RECORD PAGE */
+.vinyl-section {
+    padding: 75px 20px;
+    background: #fff8f6;
+}
+
+.vinyl-record {
+    width: 230px;
+    height: 230px;
+    margin: 35px auto;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        #252525 0px,
+        #252525 2px,
+        #393939 3px,
+        #252525 5px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+    animation: spin-vinyl 7s linear infinite;
+}
+
+.vinyl-label {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #d99ab1;
+    color: #fffaf4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    text-align: center;
+}
+
+.vinyl-label span {
+    font-size: 15px;
+}
+
+.vinyl-label strong {
+    font-family: Georgia, serif;
+    font-size: 13px;
+}
+
+.vinyl-label small {
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+@keyframes spin-vinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spotify-player {
+    max-width: 400px;
+    margin: 25px auto;
+}
+
+.spotify-player iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vinyl-record {
+        animation: none;
+    }
+}
+.vinyl-heading {
+    color: var(--dark-pink);
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 25px 0 10px;
+}
+    </style>
+</head>
+
+
+
+<body>
+
+    <header class="site-header">
+
+        <p class="site-title">our little love story ♡</p>
+
+        <nav class="navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#memories">Our memories</a>
+            <a href="#letter">A letter</a>
+            <a href="#surprises">Little surprises</a>
+            <a href="#our-song">Our Song</a>
+            <a href="#last">One last thing</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="home" id="home">
+
+            <p class="date">
+                NOVEMBER 8, 2026 · OUR 8TH MONTHSARY
+            </p>
+
+            <h1>Eight months of us.</h1>
+
+            <p class="subtitle">
+                And somehow, you're still my favorite notification,
+                my favorite person to tell things to, and one of my
+                favorite parts of every day.
+            </p>
+
+            <div class="heart">♡</div>
+
+            <h2>To my favorite person,<br>Janzel</h2>
+
+        </section>
+
+        
+<
+<section class="content-section" id="memories">
+
+    </section>
+
+    <h1 class="section-heading">Our memories</h1>
+
+    <p class="section-subtitle">
+        Eight months, countless little moments.
+    </p>
+
+    <div class="memory-card">
+
+        <div class="memory-heart">♡</div>
+
+       
+    </div>
+
+
+</section>
+
+    <h1 class="section-heading">Our 8 Months Together</h1>
+
+    <p class="section-subtitle">
+        You make every month, every week, every day and ever moment special!
+    </p>
+
+    <div class="photo-gallery">
+        <img src="images/memory 1.jpg" alt="Our photo">
+        <img src="images/memory 2.jpg" alt="Our photo">
+        <img src="images/memory 3.jpg" alt="Our photo">
+        <img src="images/memory 4.jpg" alt="Our photo">
+        <img src="images/memory 5.jpg" alt="Our photo">
+        <img src="images/memory 6.jpg" alt="Our photo">
+        <img src="images/memory 7.jpg" alt="Our photo">
+        <img src="images/memory 8.jpg" alt="Our photo">
+    </div>
+
+    <h2 class="section-heading">Little Moments</h2>
+
+    <div class="photo-gallery little-moments-gallery">
+        <img src="images/moment 1.jpg" alt="A little moment together">
+        <img src="images/moment 2.jpg" alt="A little moment together">
+        <img src="images/moment 3.jpg" alt="A little moment together">
+        <img src="images/moment 4.jpg" alt="A little moment together">
+        <img src="images/moment 5.jpg" alt="A little moment together">
+    </div>
+
+
+
+<section class="content-section" id="letter">
+
+    <h1 class="section-heading">A letter for you</h1>
+
+    <p class="section-subtitle">
+        A few words I hope you can keep.
+    </p>
+
+    <img
+        src="images/couple.jpg"
+        alt="Our photo together"
+        class="letter-photo"
+    >
+
+    <div class="letter-card">
+
+        <div class="letter-heart" style="text-align:center; color:#c77e9c; font-size:45px;">
+            ♡
+        </div>
+
+        <p class="letter-greeting">
+            Happy 8th Monthsary, Honey!
+        </p>
+
+        
+<p>Hi honey,</p>
+
+<p>Happy monthsarry hon! Another month for us!🥂</p>
+
+<p>It's kind of amazing how eight months have already passed. It doesn't feel that long, but at the same time, we've already shared so many memories together. From the random conversations to the small moments that might seem simple to others, they all mean a lot to me because I experienced them with you. Thank you for understanding me when I couldn’t even understand myself(hormonal issues I think hahaha), staying by my side through everything, loving me, and just being you that I love the most. I appreciate everything that you do, even the ones you think I don’t notice. These past months, our lives haven’t been perfect, but I think that's what makes what we have real. We're learning, growing, and figuring things out together, and that matters more than anything. Thank you for showing up for me, for always trying to make things less difficult for me, for being present whenever I need you even if you also have problems on your own. I'm really grateful to have you in my life. I’ve never loved anyone this deeply, but I’m glad it’s you. I appreciate how you’re taking care of my heart and the love I give, and also making me feel so loved! You've made my days brighter and my problems feel lighter just by being there. I hope we continue to grow together, support each other, and create more memories in the months ahead. I love you more each day!🩷</p>
+
+    </div>
+
+</section>
+
+
+
+<section class="content-section" id="surprises">
+
+    <h1 class="section-heading">Little surprises</h1>
+
+    <p class="section-subtitle">
+        Because one page of this website isn't enough
+        to tell you everything. ♡
+    </p>
+
+    <div class="surprise-container">
+
+        <div class="surprise-card">
+            <div class="note-heart">♡</div>
+            <h2>Open when you need a smile</h2>
+
+            <details>
+                <summary>Open this note</summary>
+                <div class="note-message">
+                    Hi honey! Just a little reminder that
+                    someone is very, very lucky to have you.
+                    And that someone is me! Hehehe.
+                    I hope this makes you smile even just a little.
+                    Sending you the biggest hug and lots of kisses!
+                    Mwaaa! 🩷
+                </div>
+            </details>
+        </div>
+
+        <div class="surprise-card">
+            <div class="note-heart">♡</div>
+            <h2>Open when you miss me</h2>
+
+            <details>
+                <summary>Open this note</summary>
+                <div class="note-message">
+                    Awww, you miss me? Of course you do.
+                    HAHAHA! I miss you too, hon.
+                    Imagine me giving you a tight hug right now.
+                    I wish I could teleport to you whenever
+                    I want. For now, you'll have to settle
+                    for this little note. I love you! 🥺
+                </div>
+            </details>
+        </div>
+
+        <div class="surprise-card">
+            <div class="note-heart">♡</div>
+            <h2>Open when you had a bad day</h2>
+
+            <details>
+                <summary>Open this note</summary>
+                <div class="note-message">
+                    Honey, take a deep breath. You don't
+                    have to figure everything out today.
+                    I know things can get difficult, but
+                    please don't be too hard on yourself.
+                    I'm proud of you, even on days when
+                    you feel like you haven't done enough.
+                    You don't have to carry everything alone.
+                    I'm always cheering for you. 🩷
+                </div>
+            </details>
+        </div>
+
+        <div class="surprise-card">
+            <div class="note-heart">♡</div>
+            <h2>Open when you need a kiss</h2>
+
+            <details>
+                <summary>Open this note</summary>
+                <div class="note-message">
+                    MWAH! MWAH! MWAH! 💋
+                    That's three kisses for you.
+                    One on your forehead, one on your
+                    cheek, and one on your lips.
+                    Actually, never mind. I want unlimited.
+                    Come here, handsome! HAHAHA.
+                </div>
+            </details>
+        </div>
+
+        <div class="surprise-card">
+            <div class="note-heart">♡</div>
+            <h2>Open when you need a reminder</h2>
+
+            <details>
+                <summary>Open this note</summary>
+                <div class="note-message">
+                    In case you forgot, I love you.
+                    Not just when things are easy,
+                    not just when we're happy, but also
+                    during the difficult days.
+                    I still choose you, honey.
+                    Always remember that. 🩷
+                </div>
+            </details>
+        </div>
+
+        <div class="surprise-card">
+            <div class="note-heart">♡</div>
+            <h2>Open just because</h2>
+
+            <details>
+                <summary>Open this note</summary>
+                <div class="note-message">
+                    No special reason for this one.
+                    I just wanted to remind you that
+                    you're cute, handsome, lovable,
+                    and unfortunately stuck with me.
+                    HAHAHAHA! I love being your girl.
+                    Happy monthsary, my love! 🥂
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+</section>
+
+<a href="#our-song">Our Song</a>
+
+<section class="content-section vinyl-section" id="our-song">
+
+    <p class="section-subtitle">A little song that reminds me of us</p>
+
+    <div class="vinyl-record">
+        <div class="vinyl-label">
+            <span>♡</span>
+            <small>OUR SONG</small>
+            <strong>Intertwine</strong>
+            <small>OVER OCTOBER</small>
+        </div>
+    </div>
+
+    <h1 class="vinyl-heading">Our Song ♡</h1>
+    <h2>Intertwine</h2>
+    <p>Over October ft. The Ridleys</p>
+
+    <p class="section-subtitle">
+        Some songs just feel like us. This one is one of them. ♡
+    </p>
+
+    <div class="spotify-player">
+       <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/76WyLLDWUAJZwzCThLxJpZ?utm_source=generator&si=b71924ddbac64925" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+</section>
+
+<
+<section class="content-section" id="last">
+
+    <p class="date">BEFORE YOU GO...</p>
+
+    <h1 class="section-heading">
+        I'd choose you again.
+    </h1>
+
+    <p class="section-subtitle">
+        Thank you for these eight months, and for all
+        the little moments in between.
+    </p>
+
+    <div class="memory-card">
+
+        <div class="memory-heart">♡</div>
+
+        <h2>Happy 8th monthsary, Janzel.</h2>
+
+        <p>
+            Here's to growing together, making more
+            memories, and finding new reasons to fall
+            for each other.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+</body>
+</html>
